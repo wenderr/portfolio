@@ -1,0 +1,164 @@
+/********* css reset  ***********/
+
+body, p, h1, ul, li, blockquote {
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: aliceblue;
+    background: #303138;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+:root {
+    --color-green: #50fa7b; 
+    --color-rocket: #7159c1;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr);
+    grid-template-areas: 
+    "header"
+    "content"
+    "footer";
+}
+
+/********* HEADER ***********/
+.header{
+    height: 80px;
+    background: linear-gradient(135deg, #1b0e31, #221830);
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+
+}
+.logo{
+    font-size: 50px;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav a {
+    display: block;
+    padding: 10px;
+    color: white;
+    font-size: 1.125em;  
+    transition: 0.1s;
+    border-radius: 10px; 
+}
+.nav a:hover{
+    background: var(--color-green); 
+    border-radius: 10px; 
+    color: #2e1752;
+}
+.nav li + li {
+    margin-left: 30px;
+}
+
+/********* CONTENT ***********/
+
+.content {
+    text-align: center;
+}
+.wrapper {
+    margin: 50px auto;
+}
+
+.wrapper img{
+    border-radius: 50%;
+    border: 5px solid var(--color-green);
+    margin-bottom: 30px;
+}
+.wrapper h1 {
+    font-size: 45px;
+    line-height: 42px;
+    font-weight: 700;
+}
+.wrapper h2 {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: normal;
+    opacity: 0.8;
+}
+.wrapper p {
+    font-size: 18px;
+    line-height: 34px;
+    font-weight: normal;
+    opacity: 0.8;
+    max-width: 500px;
+    margin: 30px auto;
+}
+.wrapper a{
+    color: var(--color-green); 
+}
+
+.links a{
+    color: white;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0 16px;
+    padding-bottom: 3px;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-green);
+}
+.links a:hover{
+    color: var(--color-green); 
+    transition: color 200ms;
+
+}
+
+/********* CARDS ***********/
+
+#wrapper h1{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.card{
+    background-color: #7159c1;
+}
+.cards{
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card_image-container img{
+    max-width: 100%;
+}
+.card_content,
+.card_info {
+    padding: 24px;
+}
+
+.card_info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.card_price{
+    background-color:var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
